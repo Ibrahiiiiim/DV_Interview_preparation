@@ -2015,3 +2015,12 @@ covergroup cg;
 		bins odd_header[] = {[0:65536] } with (item % 2 = 1);
 	}
 endgroup : cg
+
+
+//Q: How do you print all indexes of an associative array?
+string idx;
+
+if (aa.first(idx))
+   do
+      $display("Index=%s", idx);
+   while (aa.next(idx));
